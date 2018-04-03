@@ -1,0 +1,5 @@
+FROM elgg
+ENV AUTHOR=cyu
+
+
+EXPOSE 80
