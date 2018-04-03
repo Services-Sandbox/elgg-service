@@ -1,4 +1,4 @@
-FROM elgg
+FROM eviocastro/elgg-docker 
 ENV AUTHOR=cyu
 
 
