@@ -18,6 +18,7 @@ WORKDIR /var/www/html/elgg
 RUN git init && git remote add origin https://github.com/Services-Sandbox/Elgg.git && git fetch origin && git pull origin 3.x && chmod -R 777 .
 RUN chmod -R 777 /var/www/elgg_data/
 
+
 RUN composer global require fxp/composer-asset-plugin
 RUN composer install
 
@@ -27,11 +28,8 @@ RUN a2enmod rewrite
 
 RUN /etc/init.d/apache2 restart
 
+
 EXPOSE 80
 
 CMD apachectl -D FOREGROUND
-
-
-
-
 
